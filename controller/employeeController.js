@@ -50,7 +50,7 @@ router.put('/:id', (req,res) => {
     };
     Employee.findByIdAndUpdate(req.params.id, { $set: emp }, { new: true }, (err,doc) => {
         if (!err) { res.send(doc); }
-        else { console.log('Error in Employee Update :' + JSON.stringify(err, undefined, 2)); }
+        else { console.log('Update Employee Error!!:' + JSON.stringify(err, undefined, 2)); }
     } );
 });
 
