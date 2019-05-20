@@ -62,7 +62,7 @@ router.delete('/:id', (req,res) => {
 
     Employee.findByIdAndDelete(req.params.id, (err,doc) => {
         if (!err) { res.send(doc); }
-        else { console.log('Error in Employee Delete :' + JSON.stringify(err, undefined, 2)); }
+        else { console.log('Delete Employee Error!! :' + JSON.stringify(err, undefined, 2)); }
     } );
 });
 
